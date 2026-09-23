@@ -1,0 +1,88 @@
+%%% cidlab pretty style file
+%%% For use with cidlab.cls
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{cidlab/cidlab}[2024/12/19 v2.0 cidlab pretty style]
+
+%% Set whether the abstract is set into the first column
+\setboolean{shortarticle}{false} 
+% true = set into first column
+% false = spans page width
+
+%% Set colors
+% \definecolor{color2}{RGB}{200,89,45} % color
+\definecolor{color2}{RGB}{195,0,0} % color
+
+%% Set up the author information
+\newsavebox{\authfootinfo}
+\additionalelement{} % Don't use the \additionalelement field (set blank)
+% Author affiliation as footnote
+% Patch the \@author from authblk -- shouldn't display affiliation here
+\patchcmd{\@author}{\\[\affilsep]\AB@affillist}{}{}{}
+
+\makeatletter
+\appto{\maketitle}{%
+  \savebox{\authfootinfo}{%
+    \hspace{-3pt}\begin{minipage}{0.4995\textwidth}
+    \footnotesize
+    \vskip4pt\hrule\vskip6pt
+    \AB@affillist\par
+    \@ifundefined{@authorcontributions}{}{\@authorcontributions\par}
+    \@ifundefined{@equalauthors}{}{\@equalauthors\par}
+    \@ifundefined{@correspondingauthor}{}{\@correspondingauthor\par}
+    \@ifundefined{@authordeclaration}{}{\@authordeclaration\par}
+    \end{minipage}%
+  }
+  \begin{authfoot}
+  \usebox{\authfootinfo}
+  \end{authfoot}
+}
+\makeatother
+
+% Author information in a box at the bottom as two floats.
+\RequirePackage{float}
+\floatstyle{plain}
+\newfloat{authfoot}{b!}{auf}
+
+%% Set sans as default font
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\keywordsfont}{\sffamily}
+
+% Add line after abstract
+\appto{\abscontent}{\par\textcolor{color2}{\hrulefill}}
+
+% Add colour to the title
+\appto{\titlefont}{\color{color2}}
+
+% ...and section headings
+% Section formatting now handled by titlesec in cidlab.cls
+% Colors and styling applied through titlesec commands
+% Other section headings left unchanged.
+
+%% No dropcaps. So re-define to do nothing in case user switches
+% from the research article template
+\renewcommand{\dropcap}[1]{\noindent #1}
+
+%% Tweaks to footer
+\fancypagestyle{firststyle}{
+   \fancyfoot[R]{\footerfont \textbf{\today} | \textbf{\thepage\space of\space\pageref{LastPage}}}
+   \fancyfoot[L]{\footerfont}
+}
+
+\fancyfoot[LE]{\footerfont\textbf{\thepage\space of\space\pageref{LastPage}}}
+
+%% Make the bibliography number labels bold
+%\renewcommand\@biblabel[1]{\it{#1}}
+
+%% Break at end of article (before references)
+% The blank line before the strip command ensures there is nothing placed
+% directly before the break (which can cause formatting issues).
+\newcommand{\cidlabbreak}{
+
+\begin{strip}
+\vskip-5pt
+\hrule
+\vskip-6pt
+\end{strip}
+}
+
+\endinput

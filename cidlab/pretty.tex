@@ -1,0 +1,43 @@
+% Original cidlab-style preamble for pretty format
+% This file is included by main.tex when compiling in original format
+
+\documentclass[9pt,twocolumn,twoside]{cidlab/cidlab}
+
+\usepackage{
+  amsmath,amssymb,amsfonts,
+  csquotes,
+  epsfig,epstopdf,epigraph,
+  graphicx,
+  mathtools,
+  subfig,
+  tikz,
+  url}
+\usepackage[super]{nth}
+\usepackage[english]{babel}
+
+% Define introduction command that does nothing in cidlab format
+\newcommand{\introduction}[1]{}
+
+
+% Abstract for cidlab format
+\begin{abstract} 
+\input{includes/abstract}
+\end{abstract}
+
+\significancestatement{}
+\authorcontributions{}
+\authordeclaration{}
+\equalauthors{}
+\correspondingauthor{\textsuperscript{$\dagger$}To whom correspondence should be addressed. E-mail: joachim@uci.edu.}
+
+\dates{Draft of \today.}
+% \dates{Planned outlet: \textit{Nature Human Behaviour}.}
+
+% Include shared metadata
+\input{metadata}
+
+\AtBeginDocument{
+\verticaladjustment{-2pt}
+\thispagestyle{firststyle}
+\ifthenelse{\boolean{shortarticle}}{\ifthenelse{\boolean{singlecolumn}}{\abscontentformatted}{\abscontent}}{}
+}

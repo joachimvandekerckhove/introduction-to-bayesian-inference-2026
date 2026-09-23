@@ -1,0 +1,87 @@
+\documentclass[doc]{apa6}
+\title{Introduction to Bayesian Inference for Psychology}
+\shorttitle{Introduction to Bayesian inference} 
+%\rightheader{Introduction to Bayesian inference}
+\leftheader{Etz and Vandekerckhove}
+\author{Alexander Etz, Joachim Vandekerckhove$^\dagger$}%
+\affiliation{University of California, Irvine}%
+\date{\today}
+ 
+\usepackage{amsmath}
+\usepackage{csquotes}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+\usepackage{apacite}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{epigraph}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{tikz}
+\usepackage{microtype}
+\usetikzlibrary{calc,shapes}
+\usepackage{mathtools}
+\usepackage{bm}
+\usepackage[super]{nth}
+\usepackage{multicol}
+\usepackage{xspace}
+\usepackage{soul} % Strike out, underline
+\usepackage{fp} % Doing math
+
+\renewcommand{\dagger}{{\;\,\mathclap{\bigtriangleup}\mathclap{\perp}\mathclap{\circ}}\;}
+
+\newcounter{examplecounter}
+\newenvironment{example}[1]{%
+    \refstepcounter{examplecounter}%
+  \subsubsection{Example~\arabic{examplecounter}: ``#1''}%
+}
+
+\newcommand{\Exp}[1]{{\cal{E}}(#1)}
+\newcommand{\Uni}[2]{{\cal{U}}(#1,#2)}
+\newcommand{\Nor}[2]{{\cal{N}}(#1,#2)}
+%\renewcommand{\neg}[1]{\thicksim\!\!#1}
+\newcommand{\alt}[1]{#1'}
+\renewcommand{\|}{\,|\,}
+\renewcommand{\H}{{\cal M}}
+\newcommand{\W}{W^2}
+\newcommand{\odds}[2]{$#1\mathbf{:}#2$}
+
+\newcommand{\red}[1]{{\color{red}#1}}
+
+\newcommand{\shape}{a}
+\newcommand{\scale}{b}
+\newcommand{\mean}{m}
+\newcommand{\std}{s}
+\newcommand{\rate}{\lambda}
+
+\newcommand{\print}[2][4]{\FPeval{\tmp}{round(#2,#1)}\tmp}
+
+\newcommand{\ins}[1]{{\color{red}#1}}
+\newcommand{\rem}[1]{{\color{blue}\st{#1}}}
+\renewcommand{\note}[1]{\todo[inline]{\bf #1}}
+
+%\renewcommand{\ins}[1]{{#1}} \renewcommand{\rem}[1]{}
+
+\usepackage{listings}
+
+\allowdisplaybreaks
+
+\authornote{$^\dagger$Corresponding author.}
+
+\abstract{We introduce the fundamental tenets of Bayesian inference, which derive from two basic laws of probability theory. \ins{We cover the interpretation of probabilities, discrete and continuous versions of Bayes' rule, parameter estimation, and model comparison.} Using seven worked examples, we illustrate these principles and set up some of the technical background for the rest of this special issue of \textit{Psychonomic Bulletin \& Review}. }
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{figure*}[t]
+\begin{center}
+\input{figs/path}
+\end{center}
+%\caption{An illustration of the Product Rule of probability: The probability of the joint events on the right end of the diagram is obtained by multiplying the probabilities along the path that leads to it. The paths indicate where and how we are progressively splitting the initial probability into smaller subsets.  A suggested exercise to test understanding and gain familiarity with the rules is to construct the equivalent path diagram (i.e., that in which the joint probabilities are identical) starting on the left with a fork that depends on the event $B$ instead of $A$.} \label{fig:path}
+\end{figure*}
+
+\end{document}
+
+
+

@@ -1,0 +1,30 @@
+\usepackage{
+    fp,
+    listings,
+    xspace
+}
+\usetikzlibrary{calc,shapes}
+
+\lstdefinestyle{MyR}{language=R, basicstyle=\footnotesize\ttfamily, numbers=left, numberstyle=\tiny\color{gray}, stepnumber=1, numbersep=5pt, backgroundcolor=\color{white}, showspaces=false, showstringspaces=false, showtabs=false,   frame=single, rulecolor=\color{black}, tabsize=2, captionpos=n, breaklines=true, breakatwhitespace=false, keywordstyle=\color{blue}, commentstyle=\color{teal}, stringstyle=\color{violet},escapeinside={\%*}{*)}, morekeywords={*,...} }
+
+\newcounter{examplecounter}
+\newenvironment{example}[1]{ \refstepcounter{examplecounter} \paragraph{Example~\arabic{examplecounter}: ``#1''} }
+
+\newcommand{\alt}[1]{#1'}
+\renewcommand{\|}{\,|\,}
+\renewcommand{\H}{{\cal M}}
+\newcommand{\W}{W^2}
+\newcommand{\odds}[2]{$#1\mathbf{:}#2$}
+ 
+\newcommand{\p}{\phantom{0}}
+ 
+\newcommand{\shape}{a}
+\newcommand{\scale}{b}
+\newcommand{\mean}{m}
+\newcommand{\std}{s}
+\newcommand{\rate}{\lambda}
+
+\newcommand{\print}[2][4]{\FPeval{\tmp}{round(#2,#1)}\tmp}
+
+\allowdisplaybreaks
+\setlength{\epigraphwidth}{0.95\columnwidth}

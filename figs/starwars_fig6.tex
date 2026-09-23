@@ -1,0 +1,30 @@
+\documentclass{article}
+\usepackage[paperwidth=612bp,paperheight=792bp,margin=0pt]{geometry}
+\usepackage{graphicx,tikz}
+\pagestyle{empty}
+\begin{document}
+\noindent\begin{tikzpicture}[x=1bp,y=1bp]
+  \path[use as bounding box] (0,0) rectangle (612,792);
+  \node[anchor=south west,inner sep=0] at (0,0) {\includegraphics[width=612bp,height=792bp]{starwars_fig6_background.png}};
+  \fill[white] (116,662) rectangle (184,678);
+  \fill[white] (330,662) rectangle (398,678);
+  \fill[white] (116,552) rectangle (184,568);
+  \fill[white] (330,552) rectangle (398,568);
+  \fill[white] (116,439) rectangle (184,456);
+  \fill[white] (330,439) rectangle (398,456);
+  \fill[white] (98,577) rectangle (290,592);
+  \fill[white] (312,577) rectangle (504,592);
+  \fill[white] (164,465) rectangle (290,480);
+  \fill[white] (378,465) rectangle (504,480);
+  \node[font=\small\itshape] at (150,669) {Mon Mothma};
+  \node[font=\small\itshape] at (364,669) {Mon Mothma};
+  \node[font=\small\itshape] at (150,559) {Bail Organa};
+  \node[font=\small\itshape] at (364,559) {Bail Organa};
+  \node[font=\small\itshape] at (150,446) {Tarkin};
+  \node[font=\small\itshape] at (364,446) {Tarkin};
+  \node[font=\small] at (190,584) {$\leftarrow$ droids score higher};
+  \node[font=\small] at (404,584) {$\leftarrow$ droids score higher};
+  \node[font=\small] at (221,472) {organics score higher $\rightarrow$};
+  \node[font=\small] at (435,472) {organics score higher $\rightarrow$};
+\end{tikzpicture}
+\end{document}

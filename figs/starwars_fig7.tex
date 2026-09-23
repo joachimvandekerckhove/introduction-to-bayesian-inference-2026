@@ -1,0 +1,14 @@
+\documentclass{article}
+\usepackage[paperwidth=612bp,paperheight=792bp,margin=0pt]{geometry}
+\usepackage{graphicx,tikz}
+\pagestyle{empty}
+\begin{document}
+\noindent\begin{tikzpicture}[x=1bp,y=1bp]
+  \path[use as bounding box] (0,0) rectangle (612,792);
+  \node[anchor=south west,inner sep=0] at (0,0) {\includegraphics[width=612bp,height=792bp]{starwars_fig7_background.png}};
+  \fill[white] (222,674) rectangle (278,699);
+  \fill[white] (432,674) rectangle (481,699);
+  \node[font=\large] at (250,686) {Jyn};
+  \node[font=\large] at (456,686) {Cassian};
+\end{tikzpicture}
+\end{document}

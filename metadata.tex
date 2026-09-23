@@ -1,0 +1,51 @@
+% Shared metadata for both document formats
+% This file is included by both draft.tex and pretty.tex
+
+% Title, authors and affiliations - format-specific
+\ifdefined\apaformat
+   \title{Introduction to Bayesian Inference for Psychology}
+
+   \author{Alexander Etz and Joachim Vandekerckhove}
+
+   \affiliation{University of California, Irvine}
+
+\else
+   % cidlab format uses individual author/affiliation with symbols
+   \title{Introduction to Bayesian Inference for Psychology}
+
+   \author[a]{Alexander Etz}
+   \author[a,*]{Joachim Vandekerckhove}
+
+   \affil[a]{University of California, Irvine}
+
+   \leadauthor{Etz} 
+    
+   \authorcontributions{This is a revised version of a paper with the same title published in issue 25 of \textit{Psychonomic Bulletin \& Review}. All authors contributed to that paper. The current version is entirely the fault of JV.}
+   \authordeclaration{The authors would like to thank J.~P.\ de~Ruiter, Stephan Franke, and Zita Oravecz for helpful comments on the original paper. 
+   The authors were supported by NSF grants \#1230118 and \#1534472 from the Methods, Measurements, and Statistics panel and by John Templeton Foundation grant \#48192. AE was further supported by the National Science Foundation Graduate Research Fellowship Program (\#DGE-1321846).
+   }
+   \correspondingauthor{\textsuperscript{*}To whom correspondence should be addressed. E-mail: joachim@uci.edu.}
+
+   \equalauthors{}
+    
+   \dates{This is an edited version of:
+   \begin{quote}
+       Etz, A., \& Vandekerckhove, J. (2018). Introduction to Bayesian inference for psychology. \textit{Psychonomic Bulletin \& Review, 25,} 5–34.     
+   \end{quote}}
+\fi
+
+% Abstract - format-specific
+\ifdefined\apaformat
+  % APA format uses \abstract command
+  \abstract{%
+    \input{includes/abstract}
+  }
+\fi
+
+% Keywords
+\keywords{Introduction $|$ Bayesian estimation $|$ Bayesian inference} 
+
+\graphicspath{{./figs/}}
+
+\let\citep\cite
+\let\citet\citeA

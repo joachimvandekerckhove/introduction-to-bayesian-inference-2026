@@ -1,0 +1,81 @@
+\documentclass[doc]{apa6}
+\title{Introduction to Bayesian Inference for Psychology}
+\shorttitle{Introduction to Bayesian inference} 
+%\rightheader{Introduction to Bayesian inference}
+\leftheader{Etz and Vandekerckhove}
+\author{Alexander Etz, Joachim Vandekerckhove$^\dagger$}%
+\affiliation{University of California, Irvine}%
+\date{\today}
+ 
+\usepackage{amsmath}
+\usepackage{csquotes}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+\usepackage{apacite}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{epigraph}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{tikz}
+\usepackage{microtype}
+\usetikzlibrary{calc,shapes}
+\usepackage{mathtools}
+\usepackage{bm}
+\usepackage[super]{nth}
+\usepackage{multicol}
+\usepackage{xspace}
+\usepackage{soul} % Strike out, underline
+\usepackage{fp} % Doing math
+
+\renewcommand{\dagger}{{\;\,\mathclap{\bigtriangleup}\mathclap{\perp}\mathclap{\circ}}\;}
+
+\newcounter{examplecounter}
+\newenvironment{example}[1]{%
+    \refstepcounter{examplecounter}%
+  \subsubsection{Example~\arabic{examplecounter}: ``#1''}%
+}
+
+\newcommand{\Exp}[1]{{\cal{E}}(#1)}
+\newcommand{\Uni}[2]{{\cal{U}}(#1,#2)}
+\newcommand{\Nor}[2]{{\cal{N}}(#1,#2)}
+%\renewcommand{\neg}[1]{\thicksim\!\!#1}
+\newcommand{\alt}[1]{#1'}
+\renewcommand{\|}{\,|\,}
+\renewcommand{\H}{{\cal M}}
+\newcommand{\W}{W^2}
+\newcommand{\odds}[2]{$#1\mathbf{:}#2$}
+
+\newcommand{\red}[1]{{\color{red}#1}}
+
+\newcommand{\shape}{a}
+\newcommand{\scale}{b}
+\newcommand{\mean}{m}
+\newcommand{\std}{s}
+\newcommand{\rate}{\lambda}
+
+\newcommand{\print}[2][4]{\FPeval{\tmp}{round(#2,#1)}\tmp}
+
+\newcommand{\ins}[1]{{\color{red}#1}}
+\newcommand{\rem}[1]{{\color{blue}\st{#1}}}
+\renewcommand{\note}[1]{\todo[inline]{\bf #1}}
+
+%\renewcommand{\ins}[1]{{#1}} \renewcommand{\rem}[1]{}
+
+\usepackage{listings}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{figure*}[th]
+\begin{center}
+\input{path3}
+\end{center}
+\end{figure*}
+
+\end{document}
+
+
+

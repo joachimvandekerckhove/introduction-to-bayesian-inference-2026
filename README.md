@@ -9,3 +9,7 @@ The project is licensed under the Creative Commons Attribution 4.0 International
 ## License
 
 This work is licensed under CC BY 4.0: https://creativecommons.org/licenses/by/4.0/
+
+## Read the wiki
+
+The paper comes with some errata: https://osf.io/wskex/overview
